@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1628991-676D-4621-9876-A581B5F906AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoluOdaMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoluOdaMusteri.Designer.cs">
+      <DependentUpon>DoluOdaMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRezCesidiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRezCesidiEkle.Designer.cs">
+      <DependentUpon>frmRezCesidiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRezCesidineGoreList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRezCesidineGoreList.Designer.cs">
+      <DependentUpon>frmRezCesidineGoreList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYoneticiAnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYoneticiAnaEkran.Designer.cs">
+      <DependentUpon>frmYoneticiAnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYoneticiOda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYoneticiOda.Designer.cs">
+      <DependentUpon>frmYoneticiOda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYoneticiTariheGoreRezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYoneticiTariheGoreRezervasyon.Designer.cs">
+      <DependentUpon>FrmYoneticiTariheGoreRezervasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GirisEkrani.Designer.cs">
+      <DependentUpon>frm_GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KayitEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KayitEkrani.Designer.cs">
+      <DependentUpon>frm_KayitEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Odalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Odalar.Designer.cs">
+      <DependentUpon>frm_Odalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rezervasyon.Designer.cs">
+      <DependentUpon>Rezervasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RezervasyonBilgilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezervasyonBilgilerim.Designer.cs">
+      <DependentUpon>RezervasyonBilgilerim.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoluOdaMusteri.resx">
+      <DependentUpon>DoluOdaMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRezCesidiEkle.resx">
+      <DependentUpon>frmRezCesidiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRezCesidineGoreList.resx">
+      <DependentUpon>frmRezCesidineGoreList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYoneticiAnaEkran.resx">
+      <DependentUpon>frmYoneticiAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYoneticiOda.resx">
+      <DependentUpon>frmYoneticiOda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYoneticiTariheGoreRezervasyon.resx">
+      <DependentUpon>FrmYoneticiTariheGoreRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GirisEkrani.resx">
+      <DependentUpon>frm_GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KayitEkrani.resx">
+      <DependentUpon>frm_KayitEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Odalar.resx">
+      <DependentUpon>frm_Odalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rezervasyon.resx">
+      <DependentUpon>Rezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezervasyonBilgilerim.resx">
+      <DependentUpon>RezervasyonBilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{d704f04b-2bde-4797-ae28-6a82d55ad367}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{12b7310e-50dc-4907-b321-9260691bcd03}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\500_F_143801674_ws1J0NB3ZRDEvSDaJ12tckBDG8fW6sbs1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
