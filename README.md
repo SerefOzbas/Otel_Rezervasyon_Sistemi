@@ -1,50 +1,61 @@
-RANDEVU SİSTEMİ TOPLANTI KARARLARI
+OTEL REZERVASYON SİSTEMİ
 
-Taraflar geliştirilmesi istenen uygulama için karşılıklı bilgi alışverişinde bulundu. Amaç belirlenmiş
-olup uygulama için gerekli rollerinin çalışma kapsamları belirtildi. Değişiklik taleplerinin iki taraflı
-olarak yazılı yapılmasına karar verildi.
-Amaç: MHRS sisteminden ilgili hastaneleri çıkarmak ve hastaneler için MHRS den bağımsız randevu
-sistemi oluşturmak. Sonraki dönem satılmak istenen tedavi/operasyon paketleri için uygun raporlama
-ortamının sağlanması.
-HASTA ROLÜ
-1- Hastalar ilgili sisteme üye olmadan randevu alamayacaklar.
-2- Üyelik için hastadan mail adresi alınacak. Hasta sisteme girerken mail adresini kullanıcı hesabı
-olarak kullanacak.
-3- Sisteme kullanıcı hesabı ve şifre ile giriş yapılacak. Şifre en az 8 en fazla 16 karakter olmalıdır.  Aynı
-zamanda özel karakter içermemelidir.
-4- Hasta sisteme girişi sağladıktan sonra Karşısına Randevu Al seçeneği gelmelidir. Bu ekrana
-girdiğinde hastadan sıralı olarak Hastane, Hastaneye ait varsa poliklinik, Hastane departmanı
-seçimleri alınacaktır. Bu seçimler sonrasında ilgili departmanda çalışan doktorlar listelenecektir.
-Opsiyonel olarak hasta Hastane ve Poliklinik seçmeden sadece departman seçebilir. Bu durumda Tüm
-hastane ve polikliniklerin seçilen departmandaki doktorları listelenecektir.
-5- Hasta randevu almak istediği tarihi seçmelidir.
-6- Hasta Tarihi seçtikten sonra Doktor için mesai içindeki seansları listelenecektir. Seanslar şimdilik
-30dk şeklinde planlanacak lakin istenildiğinde ileride değiştirilebilecek şekilde tasarlanmalıdır.
-Doktorun ilgili tarihte müsait seansı var ise müsait seansları ile birlikte dolu seansları da
-görüntülenecektir. Eğer hiç müsait seans yok ise herhangi listeleme yapmadan ilgili gün uygun seans
-olmadığına yönelik bir mesaj verilecektir.
-7- Hasta uygun bir seans seçtiğinde Hasta için bir randevu oluşturulacaktır. Randevu bilgisi içinde
-Hasta, Doktor, Tarih, seans bilgileri tutulur.
-8- Hasta ekranında mevcut Randevular menü seçeneğini seçtiğinde Almış olduğu randevular
-listelenir.
-9- Hasta seçtiği herhangi randevuyu sistemden silebilir. Silmesi durumunda Doktorun ilgili seansı boşa
-çıkarılmalıdır.
+Tanım;
+Proje bir otel rezervasyon sisteminin basitleştirilmiş hali olarak kurgulanmıştır.
+Müşteriler rezervasyon yaparken aşağıdaki bilgileri girebilmelidir.
+1. Giriş Tarihi
+2. Çıkış Tarihi
+3. Konaklayacak kişi sayısı
+4. 3 kişiden fazla kişi gelirse tek rezervasyonda 2. Oda için rezervasyon
+mecburidir.
+5. Sisteme giriş yapan kişi rezervasyonu yaptıracaktır.
+6. Ayrıca rezervasyon sırasında kişi sayısına göre konaklayacak kişilerin ad
+soyad ve TCKN bilgileri de alınacaktır.
+7. Rezervasyon yaptırırken 3 tip rezervasyon çeşidi olacak. (Standart,Full,
+Full + Full)
+8. Rezervasyon çeşidi açıklamaları şu şekildedir:
+Standart: sadece oda ve kahvaltı dahildir.
+Full: oda ve tüm öğünler dahildir.
+Full + Full: oda yemek ve içki dahildir.
+1. Rezervasyon yaptıracak kişi aynı anda tek çeşit rezervasyon yaptırabilir.
 
-DOKTOR ROLÜ
-1- Doktor sisteme önceden kayıtlı olan kullanıcı adı ve şifre ile giriş yapar.
-2- ÇalışmaGünü menüsünden günün randevularını seanslar halinde görüntüler.
+Detaylar:
+1. Otel odaları standart 2 kişliktir ve sisteme bu fiyatlar girilecektir
+2. Odaların haftasonu (cuma-ctesi) geceleme fiyatları haftaiçi fiyatlarından %30
+daha fazladır. Oran değişebilir.
+3. Odalarda tek kişilik konaklama yapılabilmektedir fakat ücret standart oda
+ücretin %30 eksiği olarak fiyatlandırılmaktadır. Oran değişebilir.
+4. Odalara 1 adet ilave yatak eklenerek 3 kişi kalınabilmektedir, 3 kişilik
+konaklama standart fiyatının %20 fazlası şeklindedir. Oran değişebilir.
+5. Sistem konaklayacak kişi sayısına göre en ucuz fiyatı sağlayacak oda sayısını
+belirlemelidir
+6. Kalınacak tarihler içindeki haftasonu gecelemelerini bulup ücreti haftasonu
+fiyatlarından hesaplanmalıdır.
 
-3- Randevuları seçtiğinde bunlar için Muayene oluştur seçeneği ile Randevudaki hasta için Muayene
-oluşturur ve Muayene ekranına geçer. Eğer Hasta gelmemiş ise Randevuyu Muayene gerçekleşmedi
-şeklinde işaretleyebilmelidir.
-5- Muayene ekranında not girişi yaparak hazır bulunan bir Teşhis verisini seçmelidir. Eğer gerekir ise
-Reçete oluşturabilir. Eğer Teşhis koyulamıyor ise Tahlil talebinde bulunabilir. Bu durumda ileri bir
-tarih için Hastaya yeni bir randevuyu bu ekran aracılığı ile Doktor yapacaktır.
-6- Tamamlanmış Muayene için sorgu yapılabilir sistemin kurgulanması gerekmektedir.
-ECZACI ROLÜ
-1- Eczacı sisteme önceden kayıtlı olan kullanıcı adı ve şifre ile giriş yapar.
-2- Gelen hastanın verdiği Reçete numarası ile sistemde sorgulama yapıp reçetenin içerdiği ilaçları
-görüntüleyebilir.
-3- Hasta reçete geçmişi menüsünden hastanın daha önce aldığı ilaçları görüntüleyebilir.
+SİSTEM ROLLERİ
+Müşteri Rolü
+1- Müşteriler ilgili sisteme üye olmadan rezervasyon yapamayacaktır.
+2- Sisteme giriş için müşteriden mai adresi alınacak. Müşteri mail adresini
+kullanıcı hesabı olarak kullanacak.
+
+3- Sisteme kullanıcı hesabı ve şifre ile giriş yapılacak. Şifre en az 8 en fazla
+16 karakter olmalı ve özel karakter içermemelidir.
+4- Müşteri sisteme girdikten sonra karşısına Rezervasyon Yap seçeneği çıkmalıdır.
+Detayları yukarıda belirtilen şekilde rezervasyonu yapmalıdır.
+5- Müşteri geçmiş rezervasyonlarını görebilmelidir. Gelecek rezervasyonlarını
+başlangıç tarihinden 1 hafta öncesine kadar iptal edebilir.
+OTEL YÖNETİCİSİ ROLÜ
+1- Otel yöneticisi sisteme daha önceden tanımlanmış kullanıcı hesabı ve şifre ile
+giriş yapmalıdır.
+2- Sisteme odaları tanımlamalıdır. Oda fiyatlarını sisteme girmesi gerekmektedir.
+3- Hafta sonu fiyatlarının ne kadar fazla olacağını yüzdelik oran olarak
+tanımlayabilmeli ve değiştirebilmelidir. Aynı şekilde tek kişilik ve üç kişilik
+kalma durumlarındaki yüzdelik oranı da değiştirebilmelidir.
+4- Tarih aralığı girerek o aralıkta tüm odalarının boş mu dolu mu olduğunu
+görebilmelidir. Dolu odalarda kimlerin kalacağını listeleyebilmelidir.
+5- Sistemde yapılmış rezervasyonları tiplerine göre filtreleyerek görebilmelidir.
+Rezervasyon detaylarına bakıp kaç kişilik olduğunu, o rezervasyonun kaç adet oda
+içerdiğini, ilave yatak eklenen odaları ve yatak çıkartılan odaları
+görebilmelidir.
 KULLANILACAK TEKNOLOJILER
 WinForm, Ado.Net, MS SQL Server
